@@ -204,7 +204,9 @@ const ScrollableTabs = createReactClass({
                 directionalLockEnabled={true}
                 onScroll={this.props.onScroll}
                 bounces={false}
-                scrollsToTop={false}
+                scrollsToTop={false},
+                style={Platform.OS === 'web' ?
+                  { overflowX: 'hidden' } : undefined}
             >
                 <View
                     style={[styles.tabs, {width: this.state._containerWidth,}, this.props.tabsContainerStyle,]}
