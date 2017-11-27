@@ -206,8 +206,7 @@ const ScrollableTabs = createReactClass({
                 onScroll={this.props.onScroll}
                 bounces={false}
                 scrollsToTop={false}
-                style={Platform.OS === 'web' ?
-                  { overflowX: 'auto', width: '100%' } : undefined}
+                style={{ overflowX: 'auto', width: '100%' }}
             >
                 <View
                     style={[styles.tabs, {width: this.state._containerWidth,}, this.props.tabsContainerStyle,]}
